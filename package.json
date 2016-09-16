@@ -1,0 +1,35 @@
+{
+  "name": "npm-bin-ava-tester",
+  "version": "1.0.0-alpha.1",
+  "description": "ready-to-use ava tests for CLIs written with Node.js and NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --fix --cache .",
+    "flow_check": "flow check || exit 0",
+    "fixpack": "fixpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokeyrhyme/npm-bin-ava-tester.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jokeyrhyme/npm-bin-ava-tester.js/issues"
+  },
+  "homepage": "https://github.com/jokeyrhyme/npm-bin-ava-tester.js#readme",
+  "engines": {
+    "node": ">=4",
+    "npm": ">=3"
+  },
+  "devDependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0",
+    "fixpack": "^2.3.1",
+    "flow-bin": "^0.32.0"
+  }
+}
