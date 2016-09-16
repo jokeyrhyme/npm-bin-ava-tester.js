@@ -33,6 +33,7 @@ test('exports a function', (t) => {
 const failingFixtures = [
   'line-endings',
   'missing-file',
+  'no-sha-bang',
   'not-executable'
 ]
 failingFixtures.forEach((fixture) => {

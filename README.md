@@ -23,6 +23,8 @@ This package exports a single function that conveniently initialises some basic 
 
 -   your "bin" files all use UNIX-style LF line-endings, not CR or CRLF
 
+-   your "bin" files all start with `#! /usr/bin/env node`
+
 
 ## Usage
 
