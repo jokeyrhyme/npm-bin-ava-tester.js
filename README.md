@@ -7,19 +7,21 @@ ready-to-use ava tests for CLIs written with Node.js and NPM
 
 I designed this package for use with CLIs that are:
 
-- written in [Node.js](https://nodejs.org/)
+-   written in [Node.js](https://nodejs.org/)
 
-- published to [NPM](https://www.npmjs.com/)
+-   published to [NPM](https://www.npmjs.com/)
 
-- already tested (or otherwise compatible) with [ava](https://github.com/avajs/ava)
+-   already tested (or otherwise compatible) with [ava](https://github.com/avajs/ava)
 
 This package exports a single function that conveniently initialises some basic tests for you to ensure that:
 
-- you have at least a basic package.json file
+-   you have at least a basic package.json file
 
-- your package.json file has valid "bin" references
+-   your package.json file has valid "bin" references
 
-- your "bin" files are executable
+-   your "bin" files all exist and are executable
+
+-   your "bin" files all use UNIX-style LF line-endings, not CR or CRLF
 
 
 ## Usage

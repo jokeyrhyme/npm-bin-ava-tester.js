@@ -30,7 +30,11 @@ test('exports a function', (t) => {
   t.is(typeof tester, 'function')
 })
 
-const failingFixtures = [ 'missing-file', 'not-executable' ]
+const failingFixtures = [
+  'line-endings',
+  'missing-file',
+  'not-executable'
+]
 failingFixtures.forEach((fixture) => {
   test(
     `"${fixture}" fixture fails tests`,
