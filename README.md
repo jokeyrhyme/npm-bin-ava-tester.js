@@ -13,9 +13,11 @@ I designed this package for use with CLIs that are:
 
 - already tested (or otherwise compatible) with [ava](https://github.com/avajs/ava)
 
-This package exports a single function that conveniently initialises some basic tests for you.
+This package exports a single function that conveniently initialises some basic tests for you:
 
+- ensures you have at least a basic package.json file
 
+- ensures your package.json file has valid "bin" references
 
 
 ## Usage
