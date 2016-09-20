@@ -18,8 +18,7 @@ test('exports a function', (t) => {
 const failingFixtures = [
   'line-endings',
   'missing-file',
-  'no-sha-bang',
-  'syntax-error'
+  'no-sha-bang'
 ]
 if (process.platform.indexOf('win') !== 0) {
   failingFixtures.push('not-executable')
