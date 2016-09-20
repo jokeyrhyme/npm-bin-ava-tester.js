@@ -1,6 +1,5 @@
 'use strict'
 
-const fs = require('fs')
 const path = require('path')
 
 const execa = require('execa')
@@ -10,21 +9,7 @@ const tester = require('../lib/index.js')
 
 const AVA_BIN = path.join(__dirname, '..', 'node_modules', '.bin', 'ava')
 
-test.before(() => {
-  const NODE_MODULES = path.join(__dirname, '..', 'node_modules')
-  const fixtures = [ 'missing-file', 'not-executable', 'perfect' ]
-  fixtures.forEach((fixture) => {
-    const fixturePath = path.join(__dirname, 'fixtures', fixture)
-    try {
-      fs.symlinkSync(NODE_MODULES, path.join(fixturePath, 'node_modules'))
-    } catch (err) {
-      if (err.code === 'EEXIST') {
-        return // it's okay if the symlink already exists
-      }
-      throw err
-    }
-  })
-})
+const NODE_PATH = path.join(__dirname, '..', 'node_modules')
 
 test('exports a function', (t) => {
   t.is(typeof tester, 'function')
@@ -46,7 +31,8 @@ failingFixtures.forEach((fixture) => {
       '--no-cache',
       'test/**/*.js'
     ], {
-      cwd: path.join(__dirname, 'fixtures', fixture)
+      cwd: path.join(__dirname, 'fixtures', fixture),
+      env: { NODE_PATH }
     })
       .then(() => t.fail('unexpected pass'))
       .catch(() => t.pass('expected failure'))
@@ -64,6 +50,7 @@ passingFixtures.forEach((fixture) => {
     '--no-cache',
     'test/**/*.js'
   ], {
-    cwd: path.join(__dirname, 'fixtures', fixture)
+    cwd: path.join(__dirname, 'fixtures', fixture),
+    env: { NODE_PATH }
   }))
 })
