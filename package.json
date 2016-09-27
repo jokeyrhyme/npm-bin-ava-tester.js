@@ -6,7 +6,7 @@
     "url": "https://github.com/jokeyrhyme/npm-bin-ava-tester.js/issues"
   },
   "dependencies": {
-    "find-up": "1.1.2"
+    "find-up": "2.0.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
