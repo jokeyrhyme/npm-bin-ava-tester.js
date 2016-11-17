@@ -2,6 +2,7 @@
   "name": "npm-bin-ava-tester",
   "description": "ready-to-use ava tests for CLIs written with Node.js and NPM",
   "version": "1.0.0",
+  "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/npm-bin-ava-tester.js/issues"
   },
@@ -10,14 +11,18 @@
   },
   "devDependencies": {
     "ava": "^0.16.0",
-    "eslint": "^3.5.0",
-    "eslint-config-standard": "^6.0.0",
-    "eslint-plugin-promise": "^3.0.0",
-    "eslint-plugin-standard": "^2.0.0",
+    "eslint": "^3.10.2",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-node": "^3.0.3",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "execa": "^0.5.0",
     "fixpack": "^2.3.1",
     "flow-bin": "^0.34.0",
     "nyc": "^9.0.1"
+  },
+  "directories": {
+    "test": "test"
   },
   "engines": {
     "node": ">=4",
@@ -50,7 +55,7 @@
     "ava": "nyc ava",
     "eslint": "eslint --fix --cache .",
     "fixpack": "fixpack",
-    "flow_check": "flow check || exit 0",
+    "flow_check": "flow check",
     "nyc": "nyc check-coverage",
     "posttest": "npm run eslint && npm run flow_check && npm run fixpack",
     "test": "npm run ava && npm run nyc"
