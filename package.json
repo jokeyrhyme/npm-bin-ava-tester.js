@@ -1,7 +1,7 @@
 {
   "name": "npm-bin-ava-tester",
   "description": "ready-to-use ava tests for CLIs written with Node.js and NPM",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Ron Waldon <jokeyrhyme@gmail.com> (https://github.com/jokeyrhyme)",
   "bugs": {
     "url": "https://github.com/jokeyrhyme/npm-bin-ava-tester.js/issues"
