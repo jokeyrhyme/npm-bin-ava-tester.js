@@ -51,5 +51,5 @@ passingFixtures.forEach((fixture) => {
   ], {
     cwd: path.join(__dirname, 'fixtures', fixture),
     env: { NODE_PATH }
-  }))
+  }).then(() => t.pass()))
 })
